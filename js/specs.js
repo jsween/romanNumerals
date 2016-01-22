@@ -1,5 +1,13 @@
 describe("roman", function() {
 
+  it("will alert for under 1", function() {
+    expect(roman(0)).to.eql("Hey dumbass give us a real number");
+  });
+
+  it("will alert for over 4000", function() {
+    expect(roman(4000)).to.eql("Hey dumbass give us a real number");
+  });
+
   it("will return M for 1000", function() {
     expect(roman(2000)).to.eql("MM");
   });
