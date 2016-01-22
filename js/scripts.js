@@ -1,19 +1,15 @@
   var roman = function(num) {
     if (num >= 4000 || num < 1) {
     return "Hey dumbass give us a real number";
-    } else {
-    var romanNum = [];
-    while (num >= 1000) {
-      romanNum.push("M");
-      num -= 1000;
-    }
-  }
-    romanNum = romanNum.concat(craziness(num));
+    } 
+    var romanNum = craziness(num);
+
     return romanNum.join("");
   };
 
   var craziness = function(num) {
-    var arrayOfArrays = [[500, 900, "CM", "D"],
+    var arrayOfArrays = [[1000, 1000, "M", "M"],
+                         [500, 900, "CM", "D"],
                          [100, 400, "CD", "C"],
                          [50, 90, "XC", "L"],
                          [10, 40, "XL", "X"],
